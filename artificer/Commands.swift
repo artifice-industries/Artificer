@@ -16,7 +16,6 @@ struct Commands {
         case connect
         case help
         case list
-        case exit
         case unknown
         
         init(value: String) {
@@ -26,25 +25,39 @@ struct Commands {
             case Command.connect.rawValue: self = .connect
             case Command.help.rawValue: self = .help
             case Command.list.rawValue: self = .list
-            case Command.exit.rawValue: self = .exit
             default: self = .unknown
+            }
+        }
+        
+        var help: String {
+            switch self {
+            case .craft:
+                return "\t\t\(self.description)"
+            case .stamp:
+                return "\t\t\(self.description)"
+            case .connect:
+                return "\t\(self.description)"
+            case .help:
+                return "\t\t\(self.description)"
+            case .list:
+                return "\t\t\(self.description)"
+            case .unknown:
+                return "Unknown"
             }
         }
         
         var description: String {
             switch self {
             case .craft:
-                return "\t\tInteract with connected Stamp servers"
+                return "Interact with connected Stamp servers"
             case .stamp:
-                return "\t\tLists available Stamp servers"
+                return "Lists available Stamp servers"
             case .connect:
-                return "\tConnect the application with an available Stamp server"
+                return "Connect the application with an available Stamp server"
             case .help:
-                return "\t\tDisplays help for a command"
+                return "Displays help for a command"
             case .list:
-                return "\t\tLists commands"
-            case .exit:
-                return "\t\tExits crafting"
+                return "Lists commands"
             case .unknown:
                 return "Unknown"
             }

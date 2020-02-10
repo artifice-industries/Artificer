@@ -21,7 +21,7 @@ struct Help {
         }
         str.append("\n\u{001B}[0;33mAvailable commands:\n")
         for command in Commands.Command.allCases where command != .unknown {
-            str.append("\u{001B}[0;32m  \(command)\u{001B}[;m\(command.description)\n")
+            str.append("\u{001B}[0;32m  \(command)\u{001B}[;m\(command.help)\n")
         }
         return str
     }
@@ -29,12 +29,23 @@ struct Help {
     static func help(for command: Commands.Command) -> String {
         switch command {
         case .craft: return "Interact with connected Stamp servers"
-        case .stamp: return "List available Stamp servers"
+        case .stamp:
+            var str = ""
+            str.append("\u{001B}[0;33mDescription:\n")
+            str.append("\u{001B}[;m  \(command.description)\n\n")
+            str.append("\u{001B}[0;33mUsage:\n")
+            str.append("\u{001B}[;m  stamp\n\n")
+            str.append("\u{001B}[0;33mArguments:\n")
+            str.append("\u{001B}[0;32m  command\u{001B}[;m\tThe command to execute \u{001B}[;m[default: \"help\"]\n")
+            str.append("\u{001B}[0;32m  command_name\u{001B}[;m\tThe command name\n\n")
+            str.append("\u{001B}[0;33mOptions:\n")
+            str.append("\u{001B}[0;32m  \(Options.Option.help.availableInput)\u{001B}[;m\(Options.Option.help.description)\n")
+            return str
         case .connect: return "Connect artificer with an available Stamp server"
         case .help:
             var str = ""
             str.append("\u{001B}[0;33mDescription:\n")
-            str.append("\u{001B}[;m  Displays help for a command\n\n")
+            str.append("\u{001B}[;m  \(command.description)\n\n")
             str.append("\u{001B}[0;33mUsage:\n")
             str.append("\u{001B}[;m  help [options] [--] [<command_name>]\n\n")
             str.append("\u{001B}[0;33mArguments:\n")
@@ -47,8 +58,15 @@ struct Help {
             str.append("\u{001B}[0;32m  artificer help list\n\n")
             str.append("\u{001B}[;m  To display the list of available commands, please us the \u{001B}[0;32mlist\u{001B}[;m command.")
             return str
-        case .list: return "Lists commands"
-        case .exit: return "Exits Crafting"
+        case .list:
+            var str = ""
+            str.append("\u{001B}[0;33mDescription:\n")
+            str.append("\u{001B}[;m  \(command.description)\n\n")
+            str.append("\u{001B}[0;33mUsage:")
+            str.append("\u{001B}[;m  list [options] [--]\n\n")
+            str.append("\u{001B}[0;33mOptions:\n")
+            str.append("\u{001B}[0;32m  \(Options.Option.help.availableInput)\u{001B}[;m\(Options.Option.help.description)\n")
+            return str
         case .unknown: return ""
         }
     }
