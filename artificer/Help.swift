@@ -35,9 +35,6 @@ struct Help {
             str.append("\u{001B}[;m  \(command.description)\n\n")
             str.append("\u{001B}[0;33mUsage:\n")
             str.append("\u{001B}[;m  stamp\n\n")
-            str.append("\u{001B}[0;33mArguments:\n")
-            str.append("\u{001B}[0;32m  command\u{001B}[;m\tThe command to execute \u{001B}[;m[default: \"help\"]\n")
-            str.append("\u{001B}[0;32m  command_name\u{001B}[;m\tThe command name\n\n")
             str.append("\u{001B}[0;33mOptions:\n")
             str.append("\u{001B}[0;32m  \(Options.Option.help.availableInput)\u{001B}[;m\(Options.Option.help.description)\n")
             return str
