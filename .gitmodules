@@ -1,0 +1,3 @@
+[submodule "OSCKit"]
+	path = OSCKit
+	url = https://github.com/SammyTheHand/OSCKit
