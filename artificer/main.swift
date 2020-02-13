@@ -43,7 +43,7 @@ if argCount >= 2 {
             artificer.stamp()
         }
     case .craft:
-        artificer.craft()
+        artificer.artifice(with: command, andArguments: Array(arguments[2..<arguments.endIndex]))
     default: consoleIO.write(message: Help.command())
     }
 } else {

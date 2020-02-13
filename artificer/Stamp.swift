@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol StampDelegate {
+    
+}
+
 struct Stamp {
 
     public static func start() {

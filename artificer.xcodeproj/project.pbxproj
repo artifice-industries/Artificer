@@ -15,6 +15,23 @@
 		2AE7B3EC23E73A1800746E1D /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7B3EB23E73A1800746E1D /* Options.swift */; };
 		2AE7B3EE23E7714200746E1D /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7B3ED23E7714200746E1D /* Help.swift */; };
 		2AE7B3F023E7761800746E1D /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7B3EF23E7761800746E1D /* List.swift */; };
+		D98FC08623F32BD1006FF31A /* Craft.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98FC08523F32BD1006FF31A /* Craft.swift */; };
+		D9BEDA2623F4865400390937 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEDA2123F4865400390937 /* GCDAsyncSocket.m */; };
+		D9BEDA2723F4865400390937 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BEDA2523F4865400390937 /* GCDAsyncUdpSocket.m */; };
+		D9BEDA3623F4866100390937 /* Interface Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BEDA2823F4866100390937 /* Interface Extension.swift */; };
+		D9BEDA3723F4866100390937 /* OSCClientDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BEDA2923F4866100390937 /* OSCClientDelegate.swift */; };
+		D9BEDA3823F4866100390937 /* OSCArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BEDA2A23F4866100390937 /* OSCArguments.swift */; };
+		D9BEDA3923F4866100390937 /* OSCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BEDA2B23F4866100390937 /* OSCClient.swift */; };
+		D9BEDA3A23F4866100390937 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BEDA2C23F4866100390937 /* Interface.swift */; };
+		D9BEDA3B23F4866100390937 /* OSCTimeTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BEDA2D23F4866100390937 /* OSCTimeTag.swift */; };
+		D9BEDA3C23F4866100390937 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BEDA2E23F4866100390937 /* Socket.swift */; };
+		D9BEDA3D23F4866100390937 /* OSCPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BEDA2F23F4866100390937 /* OSCPacket.swift */; };
+		D9BEDA3E23F4866100390937 /* OSCPacketDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BEDA3023F4866100390937 /* OSCPacketDestination.swift */; };
+		D9BEDA3F23F4866100390937 /* OSCMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BEDA3123F4866100390937 /* OSCMessage.swift */; };
+		D9BEDA4023F4866100390937 /* OSCBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BEDA3223F4866100390937 /* OSCBundle.swift */; };
+		D9BEDA4123F4866100390937 /* OSCAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BEDA3323F4866100390937 /* OSCAnnotation.swift */; };
+		D9BEDA4223F4866100390937 /* OSCParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BEDA3423F4866100390937 /* OSCParser.swift */; };
+		D9BEDA4323F4866100390937 /* OSCServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BEDA3523F4866100390937 /* OSCServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +43,16 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		D97DC2B823F479D300AA9B03 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -39,6 +66,27 @@
 		2AE7B3EB23E73A1800746E1D /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		2AE7B3ED23E7714200746E1D /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 		2AE7B3EF23E7761800746E1D /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		D90DB70B23F4824D009FB55C /* artificer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "artificer-Bridging-Header.h"; sourceTree = "<group>"; };
+		D98FC08523F32BD1006FF31A /* Craft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Craft.swift; sourceTree = "<group>"; };
+		D9BEDA2123F4865400390937 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		D9BEDA2223F4865400390937 /* CocoaAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaAsyncSocket.h; sourceTree = "<group>"; };
+		D9BEDA2323F4865400390937 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		D9BEDA2423F4865400390937 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		D9BEDA2523F4865400390937 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		D9BEDA2823F4866100390937 /* Interface Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Interface Extension.swift"; sourceTree = "<group>"; };
+		D9BEDA2923F4866100390937 /* OSCClientDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSCClientDelegate.swift; sourceTree = "<group>"; };
+		D9BEDA2A23F4866100390937 /* OSCArguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSCArguments.swift; sourceTree = "<group>"; };
+		D9BEDA2B23F4866100390937 /* OSCClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSCClient.swift; sourceTree = "<group>"; };
+		D9BEDA2C23F4866100390937 /* Interface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
+		D9BEDA2D23F4866100390937 /* OSCTimeTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSCTimeTag.swift; sourceTree = "<group>"; };
+		D9BEDA2E23F4866100390937 /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		D9BEDA2F23F4866100390937 /* OSCPacket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSCPacket.swift; sourceTree = "<group>"; };
+		D9BEDA3023F4866100390937 /* OSCPacketDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSCPacketDestination.swift; sourceTree = "<group>"; };
+		D9BEDA3123F4866100390937 /* OSCMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSCMessage.swift; sourceTree = "<group>"; };
+		D9BEDA3223F4866100390937 /* OSCBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSCBundle.swift; sourceTree = "<group>"; };
+		D9BEDA3323F4866100390937 /* OSCAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSCAnnotation.swift; sourceTree = "<group>"; };
+		D9BEDA3423F4866100390937 /* OSCParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSCParser.swift; sourceTree = "<group>"; };
+		D9BEDA3523F4866100390937 /* OSCServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSCServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +119,8 @@
 		2A7925EA23DF56440062A5BD /* artificer */ = {
 			isa = PBXGroup;
 			children = (
+				D90DB70A23F48244009FB55C /* CocoaAsyncSocket */,
+				D90DB6F323F481E8009FB55C /* OSCKit */,
 				2A7925EB23DF56440062A5BD /* main.swift */,
 				2A7925F623DF583C0062A5BD /* Artificer.swift */,
 				2AE7B3E823E7366600746E1D /* Commands.swift */,
@@ -79,8 +129,43 @@
 				2AE7B3ED23E7714200746E1D /* Help.swift */,
 				2AE7B3EF23E7761800746E1D /* List.swift */,
 				2A97396B23E8FBD0009657DF /* Stamp.swift */,
+				D98FC08523F32BD1006FF31A /* Craft.swift */,
 			);
 			path = artificer;
+			sourceTree = "<group>";
+		};
+		D90DB6F323F481E8009FB55C /* OSCKit */ = {
+			isa = PBXGroup;
+			children = (
+				D9BEDA2823F4866100390937 /* Interface Extension.swift */,
+				D9BEDA2C23F4866100390937 /* Interface.swift */,
+				D9BEDA3323F4866100390937 /* OSCAnnotation.swift */,
+				D9BEDA2A23F4866100390937 /* OSCArguments.swift */,
+				D9BEDA3223F4866100390937 /* OSCBundle.swift */,
+				D9BEDA2B23F4866100390937 /* OSCClient.swift */,
+				D9BEDA2923F4866100390937 /* OSCClientDelegate.swift */,
+				D9BEDA3123F4866100390937 /* OSCMessage.swift */,
+				D9BEDA2F23F4866100390937 /* OSCPacket.swift */,
+				D9BEDA3023F4866100390937 /* OSCPacketDestination.swift */,
+				D9BEDA3423F4866100390937 /* OSCParser.swift */,
+				D9BEDA3523F4866100390937 /* OSCServer.swift */,
+				D9BEDA2D23F4866100390937 /* OSCTimeTag.swift */,
+				D9BEDA2E23F4866100390937 /* Socket.swift */,
+			);
+			path = OSCKit;
+			sourceTree = "<group>";
+		};
+		D90DB70A23F48244009FB55C /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				D9BEDA2223F4865400390937 /* CocoaAsyncSocket.h */,
+				D9BEDA2323F4865400390937 /* GCDAsyncSocket.h */,
+				D9BEDA2123F4865400390937 /* GCDAsyncSocket.m */,
+				D9BEDA2423F4865400390937 /* GCDAsyncUdpSocket.h */,
+				D9BEDA2523F4865400390937 /* GCDAsyncUdpSocket.m */,
+				D90DB70B23F4824D009FB55C /* artificer-Bridging-Header.h */,
+			);
+			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +178,7 @@
 				2A7925E423DF56440062A5BD /* Sources */,
 				2A7925E523DF56440062A5BD /* Frameworks */,
 				2A7925E623DF56440062A5BD /* CopyFiles */,
+				D97DC2B823F479D300AA9B03 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -115,6 +201,7 @@
 				TargetAttributes = {
 					2A7925E723DF56440062A5BD = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -141,13 +228,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9BEDA3B23F4866100390937 /* OSCTimeTag.swift in Sources */,
+				D9BEDA3F23F4866100390937 /* OSCMessage.swift in Sources */,
+				D9BEDA3923F4866100390937 /* OSCClient.swift in Sources */,
+				D9BEDA3723F4866100390937 /* OSCClientDelegate.swift in Sources */,
 				2A7925EC23DF56440062A5BD /* main.swift in Sources */,
+				D9BEDA2723F4865400390937 /* GCDAsyncUdpSocket.m in Sources */,
+				D9BEDA4123F4866100390937 /* OSCAnnotation.swift in Sources */,
+				D9BEDA3623F4866100390937 /* Interface Extension.swift in Sources */,
+				D9BEDA4023F4866100390937 /* OSCBundle.swift in Sources */,
 				2A7925F523DF56CE0062A5BD /* ConsoleIO.swift in Sources */,
+				D9BEDA4323F4866100390937 /* OSCServer.swift in Sources */,
+				D98FC08623F32BD1006FF31A /* Craft.swift in Sources */,
 				2AE7B3F023E7761800746E1D /* List.swift in Sources */,
+				D9BEDA3D23F4866100390937 /* OSCPacket.swift in Sources */,
 				2A97396C23E8FBD0009657DF /* Stamp.swift in Sources */,
 				2AE7B3EE23E7714200746E1D /* Help.swift in Sources */,
+				D9BEDA2623F4865400390937 /* GCDAsyncSocket.m in Sources */,
+				D9BEDA3A23F4866100390937 /* Interface.swift in Sources */,
 				2A7925F723DF583C0062A5BD /* Artificer.swift in Sources */,
+				D9BEDA3C23F4866100390937 /* Socket.swift in Sources */,
+				D9BEDA3E23F4866100390937 /* OSCPacketDestination.swift in Sources */,
+				D9BEDA4223F4866100390937 /* OSCParser.swift in Sources */,
 				2AE7B3EC23E73A1800746E1D /* Options.swift in Sources */,
+				D9BEDA3823F4866100390937 /* OSCArguments.swift in Sources */,
 				2AE7B3E923E7366600746E1D /* Commands.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,10 +375,24 @@
 		2A7925F023DF56440062A5BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4RB9WZ365D;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/artificer",
+				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.uk.artificers.artificer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "artificer/CocoaAsyncSocket/artificer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -282,10 +400,23 @@
 		2A7925F123DF56440062A5BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4RB9WZ365D;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/artificer",
+				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.uk.artificers.artificer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "artificer/CocoaAsyncSocket/artificer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

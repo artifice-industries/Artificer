@@ -8,9 +8,24 @@
 
 import Foundation
 
-class Artificer {
+struct Artificer {
     
-    public func craft() {
+    let consoleIO = ConsoleIO()
+    
+    func artifice(with command: Commands.Command, andArguments arguments: [String]) {
+        switch command {
+        case .craft:
+            if Craft.valid(arguments: arguments) {
+                guard let firstArgument = arguments.first else { return }
+                Craft().start(with: firstArgument)
+            } else {
+                consoleIO.write(message: Help.help(for: .craft))
+            }
+        default: return
+        }
+    }
+        
+    public func test() {
         let str = "****"
         
         for _ in 0..<5 {
