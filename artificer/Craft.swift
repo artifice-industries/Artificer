@@ -41,19 +41,28 @@ class Craft {
     
     private func interactiveMode() {
         let input = consoleIO.getInput()
-        if input == "artificer exit" {
+        if input == "craft exit" {
             exitApp()
-        } else if input == "artificer remind" {
+        } else if input == "craft remind" {
             let remind = "/stamp/remind"
             let message = OSCMessage(messageWithAddressPattern: remind, arguments: [])
             consoleIO.write(message: "\u{001B}[0;32mSending to Stamp Server:\u{001B}[;m\t\(remind)")
+            client.send(packet: message)
+        } else if input == "craft record=1" {
+            let record = "/stamp/media/record"
+            let message = OSCMessage(messageWithAddressPattern: record, arguments: [true])
+            consoleIO.write(message: "\u{001B}[0;32mSending to Stamp Server:\u{001B}[;m\t\(record)")
+            client.send(packet: message)
+        } else if input == "craft record=0" {
+            let record = "/stamp/media/record"
+            let message = OSCMessage(messageWithAddressPattern: record, arguments: [false])
+            consoleIO.write(message: "\u{001B}[0;32mSending to Stamp Server:\u{001B}[;m\t\(record)")
             client.send(packet: message)
         } else {
             let message = OSCMessage(messageWithAddressPattern: "/stamp/timeline/note", arguments: ["\(input)"])
             client.send(packet: message)
             let annotation = OSCAnnotation.annotation(for: message, with: .spaces, andType: true)
             consoleIO.write(message: "\u{001B}[0;32mSending to Stamp Server:\u{001B}[;m\t\(annotation)")
-            
         }
     }
     
