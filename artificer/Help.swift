@@ -12,16 +12,16 @@ struct Help {
     
     static func command() -> String {
         var str = ""
-        str.append("\u{001B}[;mArtificer \u{001B}[0;32m1.0.1\n\n")
+        str.append("\u{001B}[;mArtificer \u{001B}[0;32m1.0.0\n\n")
         str.append("\u{001B}[0;33mUsage:\n")
-        str.append("\u{001B}[;m  command [options] [arguments]\n\n")
+        str.append("\u{001B}[;37m  command [options] [arguments]\n\n")
         str.append("\u{001B}[0;33mOptions:\n")
         for option in Options.Option.allCases where option != .unknown {
-            str.append("\u{001B}[0;32m  \(option.availableInput)\u{001B}[;m\(option.description)\n")
+            str.append("\u{001B}[0;32m  \(option.availableInput)\u{001B}[;37m\(option.description)\n")
         }
         str.append("\n\u{001B}[0;33mAvailable commands:\n")
         for command in Commands.Command.allCases where command != .unknown {
-            str.append("\u{001B}[0;32m  \(command)\u{001B}[;m\(command.help)\n")
+            str.append("\u{001B}[0;32m  \(command)\u{001B}[;37m\(command.help)\n")
         }
         return str
     }

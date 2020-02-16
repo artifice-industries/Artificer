@@ -46,23 +46,32 @@ class Craft {
         } else if input == "craft remind" {
             let remind = "/stamp/remind"
             let message = OSCMessage(messageWithAddressPattern: remind, arguments: [])
-            consoleIO.write(message: "\u{001B}[0;32mSending to Stamp Server:\u{001B}[;m\t\(remind)")
+            let annotation = OSCAnnotation.annotation(for: message, with: .spaces, andType: true)
+            consoleIO.write(message: "\u{001B}[0;32mSending to Stamp Server: \u{001B}[;37m\t\(annotation)")
             client.send(packet: message)
         } else if input == "craft record=1" {
             let record = "/stamp/media/record"
             let message = OSCMessage(messageWithAddressPattern: record, arguments: [true])
-            consoleIO.write(message: "\u{001B}[0;32mSending to Stamp Server:\u{001B}[;m\t\(record)")
+            let annotation = OSCAnnotation.annotation(for: message, with: .spaces, andType: true)
+            consoleIO.write(message: "\u{001B}[0;32mSending to Stamp Server: \u{001B}[;37m\t\(annotation)")
             client.send(packet: message)
         } else if input == "craft record=0" {
             let record = "/stamp/media/record"
             let message = OSCMessage(messageWithAddressPattern: record, arguments: [false])
-            consoleIO.write(message: "\u{001B}[0;32mSending to Stamp Server:\u{001B}[;m\t\(record)")
+            let annotation = OSCAnnotation.annotation(for: message, with: .spaces, andType: true)
+            consoleIO.write(message: "\u{001B}[0;32mSending to Stamp Server:\u{001B}[;37m\t\(annotation)")
+            client.send(packet: message)
+        } else if input == "craft recording" {
+            let record = "/stamp/media/isRecording"
+            let message = OSCMessage(messageWithAddressPattern: record, arguments: [])
+            let annotation = OSCAnnotation.annotation(for: message, with: .spaces, andType: true)
+            consoleIO.write(message: "\u{001B}[0;32mSending to Stamp Server:\u{001B}[;37m\t\(annotation)")
             client.send(packet: message)
         } else {
             let message = OSCMessage(messageWithAddressPattern: "/stamp/timeline/note", arguments: ["\(input)"])
             client.send(packet: message)
             let annotation = OSCAnnotation.annotation(for: message, with: .spaces, andType: true)
-            consoleIO.write(message: "\u{001B}[0;32mSending to Stamp Server:\u{001B}[;m\t\(annotation)")
+            consoleIO.write(message: "\u{001B}[0;32mSending to Stamp Server:\u{001B}[;37m\t\(annotation)")
         }
     }
     
@@ -78,15 +87,15 @@ extension Craft: OSCClientDelegate {
     
     func clientDidConnect(client: OSCClient) {
         var str = ""
-        str.append("\u{001B}[;mArtificer \u{001B}[0;32m1.0.1\n\n")
-        str.append("\u{001B}[0;33mConnected to Stamp Server:\u{001B}[;m\t\(client.host  ?? "")\n")
-        str.append("\u{001B}[0;32mBegin crafting your production...\n\u{001B}[;m")
+        str.append("\u{001B}[;mArtificer \u{001B}[0;32m1.0.0\n\n")
+        str.append("\u{001B}[0;33mConnected to Stamp Server:\u{001B}[;37m\t\(client.host  ?? "")\n")
+        str.append("\u{001B}[0;32mBegin crafting your production...\n\u{001B}[;37m")
         consoleIO.write(message: str)
         self.interactiveMode()
     }
     
     func clientDidDisconnect(client: OSCClient) {
-        consoleIO.write(message: "\u{001B}[0;31mDisconnected from Stamp Server:\u{001B}[;m\t\(client.host  ?? "")")
+        consoleIO.write(message: "\u{001B}[0;31mDisconnected from Stamp Server:\u{001B}[;37m\t\(client.host  ?? "")")
         exitApp()
     }
     
@@ -96,7 +105,7 @@ extension Craft: OSCPacketDestination {
     
     func take(message: OSCMessage) {
         let annotation = OSCAnnotation.annotation(for: message, with: .spaces, andType: true)
-        consoleIO.write(message: "\u{001B}[0;31mReceived from Stamp Server:\u{001B}[;m\t\(annotation)\n")
+        consoleIO.write(message: "\u{001B}[0;31mReceived from Stamp Server:\u{001B}[;37m\t\(annotation)\n")
         interactiveMode()
     }
     

@@ -78,7 +78,7 @@ extension ServicesDiscoverer: NetServiceDelegate {
         guard let service = self.services.last?.service, service == sender, self.searchComplete else { return }
         let filteredServices = services.filter({ $0.ipAddress != "" })
         var str = ""
-        str.append("\u{001B}[;mArtificer \u{001B}[0;32m1.0.1\n\n")
+        str.append("\u{001B}[;mArtificer \u{001B}[0;32m1.0.0\n\n")
         if !filteredServices.isEmpty {
             str.append("\u{001B}[0;33mAvailable Stamp Servers:\n")
             for service in filteredServices {
