@@ -1,2 +1,3 @@
-artificer - Command line application for Stamp
+# Artificer 
+Command line client application for Stamp
 
