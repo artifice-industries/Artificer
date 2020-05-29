@@ -1,4 +1,9 @@
+<p align="center">
+    <img src="artificer-icon.svg" width="256" align="middle" alt=“Artificer”/>
+</p>
+
 # Artificer
+Communicate with [Stamp](https://stamp.xyz) from the command line.
 
 ## Introduction
 Artificer is the command-line application for Stamp. It provides a number of helpful commands that can assist you while you take notes for your production. To view a list of all available Artificer commands, you may use the `list` command:
